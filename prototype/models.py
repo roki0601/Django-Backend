@@ -75,6 +75,9 @@ class User(AbstractUser):
         null=True,
         )
 
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
     
     
     # Свойство `USERNAME_FIELD` сообщает нам, какое поле мы будем использовать для входа.
@@ -148,3 +151,6 @@ class EventUser(models.Model):
         default=False,
         blank=False,
     )
+    class Meta:
+        verbose_name = 'Профиль участника'
+        verbose_name_plural = 'Профили участников'
